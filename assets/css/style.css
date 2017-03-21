@@ -15,10 +15,17 @@ body
   background-color: #222;
   color: #FFFFFF;
   text-align: center;
+  font-size: 30pt;
+  letter-spacing: 2.5px;
 }
 
 #all
 {
   position: relative;
   min-height: 100vh;
+}
+
+#main-header 
+{
+
 }
