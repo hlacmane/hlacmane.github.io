@@ -1,0 +1,3 @@
+[04-Aug-2016 16:06:48 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/hamish19061996/public_html/projects/labsrefined/createwordpress/index.php on line 1
+[04-Aug-2016 16:09:55 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/hamish19061996/public_html/projects/labsrefined/createwordpress/index.php on line 1
+[04-Aug-2016 16:09:57 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/hamish19061996/public_html/projects/labsrefined/createwordpress/index.php on line 1

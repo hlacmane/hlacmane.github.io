@@ -1,0 +1,308 @@
+@charset "utf-8";
+@import url('http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic');
+
+/*html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/*
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}*/
+body, tr, th, td, table
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+::-webkit-validation-bubble /* form error messages for requried fields, no inheritcance included*/
+{
+  font-family: 'Ubuntu', sans-serif;
+}
+::-webkit-validation-bubble-arrow-clipper 
+{
+  font-family: 'Ubuntu', sans-serif;
+}
+::-webkit-validation-bubble-arrow 
+{
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #000000;
+}
+::-webkit-validation-bubble-message 
+{
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #000000;
+  color: #F2F2F2;
+}
+
+div.maintitle
+{
+  font-size: 4em;
+  position: relative;
+  vertical-align: middle; 
+  padding-bottom: 0.2em;
+}
+
+div.error
+{
+  text-align: center;
+  color: #F2F2F2;	/*red*/
+  font-weight: bold;
+  background-color: #FF0000;
+  border-radius: 1em;
+  
+}
+
+div.regispgbuttons
+{
+  text-align: center;
+  position: relative;
+  vertical-align: middle; 
+  padding-bottom: 0.2em;
+}
+
+div.desc
+{
+  font-size: 1.25em;
+  text-align: left;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+div.desc2
+{
+  font-size: 1.25em;
+  text-align: left;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+div.links
+{
+  text-align: center;
+  padding-bottom: 0.3em;
+}
+
+div.all
+{
+  font-family: 'Ubuntu', sans-serif;
+  width: 50em;
+  margin: 0 auto;
+  position: relative;
+/*  background-color: #04C4D9;*/
+  background-color: #05AFF2;
+  border-radius: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+div.accbar
+{
+  text-align: right;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+div.textmid
+{
+  text-align: center;
+}
+
+.trofglist /*table row fo where groups list is displayed*/
+{
+  vertical-align: middle;
+}
+
+.tofgdisplay /*table fo group display*/
+{
+  display: block;
+  max-width: 50em;
+  text-align: center;
+  margin: 0px auto;
+  font-size: 1em;
+}
+
+.tofgdisplay th
+{
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+  font-weight: bold;
+}
+
+.inputbox
+{
+  border-radius: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 0em;
+}
+.dropdownbox
+{
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 1em;
+  border: 0em;
+}
+.optcss
+{
+  font-family: 'Ubuntu', sans-serif;
+  border-radius: 1em;
+  border: 0em;
+}
+
+label
+{
+  font-weight: bold;
+}
+
+.tablecbillcgroup
+{
+  display: block;
+  max-width: 50em;
+  text-align: center;
+  margin: 0px auto;
+  font-size: 1em;
+}
+
+.tableoflogin
+{
+  display: block;
+  max-width: 50em;
+  text-align: center;
+  margin: 0px auto;
+  font-size: 1em;
+}
+.tdoflogin
+{
+  display: block;
+  text-align: center;
+  margin: 0px auto;
+
+}
+.tableofregi
+{
+  margin: 0px auto;
+  max-width: 50em;
+  text-align: center;
+  border: 0.5em;
+  border-color: solid white; /*not workign???????????????*/
+}
+.submitbutton
+{
+  color: #F2F2F2;
+  background-color: #05AFF2;	/*old colour #04C4D9*/
+  border:0;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 1em;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  
+}
+.submitbutton:hover
+{
+  color: #05AFF2;
+  background-color: #F2F2F2;
+}
+td
+{
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+div.copyrightbar
+{
+  /*background-color: #696969;	#a9a9a9;	temp*/
+  height: 1.5em;	/*should be set to size of image possibly used*/
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: right;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+  margin: 0em;
+  border: 1em;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+a:link
+{
+  color: #F2F2F2;
+  font-weight: bold;
+  font-size: 1.15em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+a:visited
+{
+  color: #F2F2F2;
+  font-weight: bold;
+}
+
+a:hover
+{
+  color: #04C4D9;
+  background-color: #F2F2F2;
+  font-weight: bold;
+  border-radius: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+body
+{
+/*  background-color: #05AFF2; blue*/
+  background-color: #000000;
+  color: #F2F2F2;
+}

@@ -1,0 +1,996 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,900,700italic,700);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,100italic,300,300italic,900italic,900,800italic,800,700italic,500italic,700,500,400italic);
+
+/*#00bfff;*/
+html, body
+{
+  margin: 0;
+  padding: 0;
+}
+body
+{
+  width: 100%;
+  height: 100%;
+  background-color: #4A5453;
+}
+#all
+{
+  position: relative;
+  min-height: 100vh;
+}
+#content
+{
+  padding-bottom: 50px;
+}
+#footer
+{
+  position: absolute;
+  bottom: 0;
+}
+#mailicon
+{
+  /*background-image: url("/images/mail-icon.svg");*/
+}
+#madtesting
+{
+  /*background-image: url("/images/mail-icon.svg");*/
+}
+#testing2
+{
+  background-image: url("/images/mail-icon200px.svg");
+}
+#testing3
+{
+  background-image: url("/images/facebook-icon200px.svg");
+}
+#testing4
+{
+  background-image: url("/images/linkedin-icon200px.svg");
+}
+.paypalmeFam, .paypalmeFam:hover, .paypalmeFam:visited
+{
+  padding: 0;
+  margin: 0;
+  color: #FFFFFF;
+  /*background-color: #2093CC;*/
+  text-decoration: none;
+}
+
+.mailMe, .mailMe:hover, .mailMe:visited
+{
+  color: #444444;
+  font-weight: 200;
+}
+
+meter
+{
+  -webkit-appearance: none;
+  height:20px;
+}
+/*Chrome/Safari/Opera/iOS*/
+meter::-webkit-meter-bar
+{
+  background: none; /* Required to get rid of the default background property */
+  background-color: #FFFFFF;
+}
+meter::-webkit-meter-bar
+{
+  /*box-shadow: 0 5px 5px -5px #999 inset;*/
+  background-image: linear-gradient( 90deg, #8fffff 60%); 
+  background-size: 100% 100%;
+}
+/*Meter for skill rating
+reference this
+https://css-tricks.com/css3-progress-bars/
+*/
+.theMeter
+{
+  width: 110px;
+  height: 20px;
+  position: relative;
+  background: #555;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin-top: 2.5px;
+  /*-moz-border-radius: 25px;
+  -webkit-border-radius: 25px;*/
+}
+
+.meterPercentage
+{
+  height: 100%;
+  position: relative;
+  display: block;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #32cd32;
+  overflow: hidden;
+  box-shadow: 
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+}
+.plainContainer
+{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+/*  width: 100%;*/
+}
+#skillsC
+{
+  width: 30px;
+}
+#skillsLATEX
+{
+  width: 65px;
+}
+#skillsCSS, #skillsMSOFFICE, #skillsPHP
+{
+  width: 70px;
+}
+#skillsJS, #skillsJSJQ, #skillsWNDWS, #skillsUNIX
+{
+  width: 75px;
+}
+#skillsADOBEPS
+{
+  width: 80px;
+}
+#skillsSQL, #skillsCOMM, #skillsJAVA, #skillsHTML, #skillsTIME, #skillsTEAMW
+{
+  width: 90px;
+}
+
+#mTest1
+{
+  width: 25%;
+}
+@media screen and (min-width: 250px) {
+  #all
+  {
+    font-family: 'Titillium Web', sans-serif;
+    /*font-family: 'Alegreya Sans', sans-serif;*/
+    /*color: #FFFFFF;*/
+    color: #444444;
+    height: 100%;
+    /*background-color: #2093CC;*/
+    background-color: #dddeee;/*#eeeddd#dddddd*/
+    font-size: 12pt;
+    text-align: center;
+  }
+  
+  #header
+  {
+    height: 120px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    /*background-color: #4A5453;
+    box-shadow: 0px 10px 10px #4A5453;*/
+    background: linear-gradient(to top, #b6e1fc, #6cc3f9);/*first color was #87CEEB right hand was #4169E1 #00e6e6*/
+    /*box-shadow: 0px 10px 10px #b6e1fc;*/
+    box-shadow: 0px -5px 48px -2px rgba(0, 0, 0, 0.75);
+    
+  }
+  #logo
+  {
+    display: inline-block;
+    width: 0%;
+    float: left;
+    left: 0%;
+  }
+  /*#nameTitle*/
+  #nameNbuttons
+  {
+    display: inline-block;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    padding-bottom: 0px;
+  }  
+  #nameTitle
+  {
+    font-weight: 600;
+    font-size: 20pt;
+    border-bottom: 2px;
+    border-bottom-style: double;
+    border-bottom-color: #FFFFFF;
+  }
+  #nameTitle, #buttons
+  {
+    padding-top: 10px;
+    height: 50%;
+    display: block;
+  }
+  .mButton
+  {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14pt;
+  }
+  .mButton:hover
+  {
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #help
+  {
+    width: 0%;
+    display: inline-block;
+    float: right;
+  }
+  #content
+  {
+    margin-top: 40px;
+  }
+  #footer
+  {
+    margin-top: 10px;
+    height: 25px;
+    width: 100%;
+    padding-top: 7.5px;
+    padding-bottom: 15px;
+    font-size: 14pt;
+    color: #FFFFFF;
+    background-color: #4A5453;
+  }
+  .mainRow
+  {
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    width: 100%;
+    padding-bottom: 25px;
+  }
+  .mRTitle, .mRMain
+  {
+    width: 82.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .mRTitle
+  {
+    font-size: 14pt;
+    font-weight: 600;
+    margin-bottom: 2px;
+    border-bottom: 1px;
+    padding-bottom: 5px;
+    border-bottom-style: double;
+    /*border-bottom-color: #FFFFFF;*/
+    border-bottom-color: #444444;
+  }
+  .mRMain
+  {
+    text-align: left;
+    font-size: 12pt;
+    padding-top: 5px;
+  }
+  .nameage, .nameageval
+  {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .nameage
+  {
+    font-weight: 600;
+  }
+  .nameageval
+  {
+    font-weight: 200;
+  }
+  
+  #uniModExpand, #gcseExpand
+  {
+    text-decoration: underline;
+  }
+  .uniYR
+  {
+    font-size: 10pt;
+  }
+  .modList
+  {
+    font-size: 9pt;
+  }
+  .eduACSType
+  {
+    font-size: 11pt;
+  }
+  #eduA2Desc, #eduASDesc
+  {
+    font-size: 10pt;
+  }
+  #gcseIMP, #gcseALL
+  {
+    font-size: 10pt;
+  }
+  #workExp, #voluntary, #education, #awardsAchieved, #languages
+  {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  #voluntary, #education, #awardsAchieved, #languages
+  {
+    margin-top: 15px;
+  }
+  #wexpTitle, #voluTitle, #eduTitle, #awardsTitle, #languagesTitle
+  {
+    font-weight: 600;
+    font-size: 13pt;
+  }
+  #awardsDesc, #languagesDesc
+  {
+    font-size: 12pt;
+  }
+  .wexp, .volu, .eduWhole
+  {
+    /*background-color: #4A5453;/*#3F64A3*/
+    background-color: #dadada;/*#cccccc;/*#bbbbbb*/
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0;
+    /*
+    border-left: 10px;
+    border-right: 10px;
+    border-left: 5px;
+    border-right: 5px;
+    */
+    border-left: 3px;
+    border-right: 3px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+  .wexpPlace, .voluPlace, /*.eduPlace,*/ .wexpDate, .voluDate, /*.eduDate, */.wexpDesc, .voluDesc, .wexpDescClick, .voluDescClick/*, .eduWhole, .eduACSType, .eduA2Desc, .eduASDesc*/
+  {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  .eduWhole
+  {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+  }
+  .eduPlace, .eduDate, #uniModExpand, #uniModules, .eduACSType, #eduA2Desc, #eduASDesc, #gcseExpand, #gcseIMP, #gcseALL
+  {
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  
+  .wexpPlace, .voluPlace, .eduPlace
+  {
+    font-size: 12pt;
+    font-weight: 600;
+  }
+  .wexpDate, .voluDate, .eduDate
+  {
+    font-size: 10pt;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .wexpDesc, .voluDesc, .wexpDescClick, .voluDescClick
+  {
+    font-size: 11pt;
+  }
+  .wexpDescClick, .voluDescClick
+  {
+    text-decoration: underline;
+  }
+  .wexpDescClick, .voluDescClick, #uniModExpand, #gcseExpand
+  {
+    cursor: pointer;
+  }
+  
+  li.skillEle, li.interestsEle
+  {
+    border: 0;
+    border-bottom: 1px;
+    border-style: dashed;
+    list-style-type: none;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  li.skillEle.skill-subsection
+  {
+    font-weight: 600;
+    border-style: double;
+  }
+  #skill-first-header
+  {
+    padding-bottom: 25px;
+  }
+  ul#skillSet, ul#interestsSet
+  {
+    margin: 0;
+    padding: 0;
+  }
+  .skillText
+  {
+    padding-top: 10px;
+  }
+  #skillsTIME
+  {
+  }
+  li#skillsTIMEli
+  {
+    border: 0;
+  }
+  .projectLinks
+  {
+    color: #444444;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    display: block;
+    font-size: 12pt;
+    font-weight: 600;
+  }
+  .projectDivs
+  {
+    /*margin-top: 12px;*/
+    /*padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    border: 0;
+    border-bottom-width: 1px;
+    border-style: dashed;*/
+    margin-top: 10px;
+    margin-bottom: 17.5px;
+    /*padding: 5px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    border: 1px;
+    border-style: dashed;
+    border-radius: 10px;*/
+    background-color: #dadada;
+    border: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-left: 3px;
+    border-right: 3px;
+    border-style: solid;
+    border-radius: 10px;
+  }
+  .pInfo
+  {
+    /*padding: 5px;*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+  .pIMore
+  {
+  }
+  .pILess
+  {
+  }
+  pIFull
+  {
+  }
+  
+  #mRMainInterests
+  {
+    text-align: center;
+  }
+  .contactFormRow
+  {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  div#contactFormDiv
+  {
+    text-align: center;
+  }
+  label.contFormLabel
+  {
+    font-size: 12pt;
+    font-weight: 600;
+  }
+  .contFormLeft
+  {
+    margin-bottom: 5px;
+  }
+  .contFormLeft, .contFormRight 
+  {
+  }
+  .inputBox
+  {
+    width: 200px;
+    height: 25px;
+    font-size: 12pt;
+    border: 1px;
+    border-style: ridge;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  #contMsg
+  {
+    height: 500px;
+  }
+  #contactSubmit
+  {
+    margin-top: 15px;
+    border: 0;
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #444444;
+    padding: 5px;
+    font-size: 12pt;
+    font-weight: 600;
+    width: 210px;
+    height: 40px;
+  }
+  #contactSubmit:hover
+  {
+    background-color: #FFFFFF;
+    color: #444444;
+  }
+}
+
+@media screen and (min-width: 500px) {
+
+  #header
+  {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  #nameTitle
+  {
+    font-size: 30pt;
+  }
+  .mButton
+  {
+    font-size: 15pt;
+  }
+  .mButton:hover
+  {
+  }
+
+  .mRTitle, .mRMain
+  {
+    width: 80%;
+  }
+  .mRTitle
+  {
+    font-size: 18pt;
+  }
+  .mRMain
+  {
+    font-size: 14pt;
+  }
+  .uniYR
+  {
+    font-size: 12pt;
+  }
+  .modList
+  {
+    font-size: 11pt;
+  }
+  .eduACSType
+  {
+    font-size: 13pt;
+  }
+  #eduA2Desc, #eduASDesc
+  {
+    font-size: 12pt;
+  }
+  #gcseIMP, #gcseALL
+  {
+    font-size: 12pt;
+  }
+
+  #wexpTitle, #voluTitle, #eduTitle, #awardsTitle, #languagesTitle
+  {
+    font-size: 15pt;
+  }
+  #awardsDesc, #languagesDesc
+  {
+    font-size: 14pt;
+  }
+  
+  .wexpPlace, .voluPlace, .eduPlace
+  {
+    font-size: 14pt;
+  }
+  .wexpDate, .voluDate, .eduDate
+  {
+    font-size: 12pt;
+  }
+  .wexpDesc, .voluDesc, .wexpDescClick, .voluDescClick
+  {
+    font-size: 13pt;
+  }
+  .contFormLeft, .contFormRight 
+  {
+    display: inline-block;
+  }
+  .contFormLeft
+  {
+    width: 100px;
+  }
+  #contactSubmit
+  {
+    width: 315px;
+  }
+  
+  .projectLinks
+  {
+    font-size: 14pt;
+  }
+  .pInfo
+  {
+    font-size: 13pt;
+  }
+}
+/*
+600 - chose 650
+700
+800
+900
+1000
+1080
+
+*/
+@media screen and (min-width: 650px) {
+  
+  #header
+  {
+    padding-top: 10px;
+    padding-bottom: 12.5px;
+  }
+  #buttons
+  {
+    padding-top: 15px;
+  }
+  .mRMain
+  {
+    font-size: 14.5pt;
+  }
+
+  .uniYR
+  {
+    font-size: 12.5pt;
+  }
+  .modList
+  {
+    font-size: 11.5pt;
+  }
+  .eduACSType
+  {
+    font-size: 13.5pt;
+  }
+  #eduA2Desc, #eduASDesc
+  {
+    font-size: 12.5pt;
+  }
+  #gcseIMP, #gcseALL
+  {
+    font-size: 12.5pt;
+  }
+
+  #wexpTitle, #voluTitle, #eduTitle, #awardsTitle, #languagesTitle
+  {
+    font-size: 15.5pt;
+  }
+  #awardsDesc, #languagesDesc
+  {
+    font-size: 14.5pt;
+  }
+  
+  .wexpPlace, .voluPlace, .eduPlace
+  {
+    font-size: 14.5pt;
+  }
+  .wexpDate, .voluDate, .eduDate
+  {
+    font-size: 12.5pt;
+  }
+  .wexpDesc, .voluDesc, .wexpDescClick, .voluDescClick
+  {
+    font-size: 13.5pt;
+  }
+  .inputBox
+  {
+    width: 250px;
+  }
+  .contFormLeft
+  {
+    width: 125px;
+  }
+  #contactSubmit
+  {
+    width: 390px;
+  }
+  .projectLinks
+  {
+    font-size: 14.5pt;
+  }
+  .pInfo
+  {
+    font-size: 13.5pt;
+  }
+}
+
+
+@media screen and (min-width: 750px) {
+
+  .mRMain
+  {
+    font-size: 15pt;
+  }
+
+  .uniYR
+  {
+    font-size: 13pt;
+  }
+  .modList
+  {
+    font-size: 12pt;
+  }
+  .eduACSType
+  {
+    font-size: 14pt;
+  }
+  #eduA2Desc, #eduASDesc
+  {
+    font-size: 13pt;
+  }
+  #gcseIMP, #gcseALL
+  {
+    font-size: 13pt;
+  }
+
+  #wexpTitle, #voluTitle, #eduTitle, #awardsTitle, #languagesTitle
+  {
+    font-size: 16pt;
+  }
+  #awardsDesc, #languagesDesc
+  {
+    font-size: 15pt;
+  }
+  .wexpPlace, .voluPlace, .eduPlace
+  {
+    font-size: 14.5pt;
+  }
+  .wexpDate, .voluDate, .eduDate
+  {
+    font-size: 12.5pt;
+  }
+  .wexpDesc, .voluDesc, .wexpDescClick, .voluDescClick
+  {
+    font-size: 13.5pt;
+  }
+  .projectLinks
+  {
+    font-size: 15pt;
+  }
+  .pInfo
+  {
+    font-size: 15pt;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #header
+  {
+    height: 145px;
+  }
+  #nameNbuttons
+  {
+    width: 80%;
+  }
+  .mButton
+  {
+    font-size: 17pt;
+  }
+  #nameTitle
+  {
+    font-size: 40pt;
+  }
+  .mRTitle, .mRMain
+  {
+    width: 75%;
+  }
+  .mRMain
+  {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .inputBox
+  {
+    width: 300px;
+  }
+
+  .contFormLeft
+  {
+    width: 175px;
+  }
+  #contactSubmit
+  {
+    width: 490px;
+  }
+}
+@media screen and (min-width: 950px) {
+
+  #content
+  {
+    margin-top: 50px;
+  }
+
+  #uniModExpand, #gcseExpand
+  {
+    text-decoration: underline;
+  }
+}
+
+/*HD BASE SCREEN*/
+@media screen and (min-width: 1280px) {
+  #nameTitle
+  {
+    font-size: 50pt;
+    border-bottom: 3px;
+    border-bottom-style: solid;
+  }
+  #header
+  {
+    height: 170px;
+  }
+  .mButton
+  {
+    padding-left: 5.5px;
+    padding-right: 5.5px;
+    font-size: 20pt;
+  }
+  .mButton:hover
+  {
+  }
+  #content
+  {
+    margin-top: 50px;
+  }
+  
+  #footer
+  {
+    font-size: 15pt;
+  }
+  .mainRow
+  {
+    padding-bottom: 100px;
+  }
+
+  .mRTitle, .mRMain
+  {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mRTitle
+  {
+    font-size: 24pt;
+    border-bottom: 2px;
+    border-bottom-style: solid;
+  }
+  .mRMain
+  {
+    font-size: 20pt;
+  }
+
+  #uniModExpand, #gcseExpand
+  {
+    font-size: 17pt;
+  }
+  .uniYR
+  {
+    font-size: 16pt;
+  }
+  .modList
+  {
+    font-size: 15pt;
+  }
+  .eduACSType
+  {
+    font-size: 17pt;
+  }
+  #eduA2Desc, #eduASDesc
+  {
+    font-size: 16pt;
+  }
+  #gcseIMP, #gcseALL
+  {
+    font-size: 16pt;
+  }
+
+  #wexpTitle, #voluTitle, #eduTitle, #awardsTitle, #languagesTitle
+  {
+    font-size: 22pt;
+  }
+  #awardsDesc, #languagesDesc
+  {
+    font-size: 18pt;
+  }
+  
+  .wexp, .volu, .eduWhole
+  {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .wexpPlace, .voluPlace, .eduPlace
+  {
+    font-size: 18pt;
+    font-weight: 600;
+  }
+  .wexpDate, .voluDate, .eduDate
+  {
+    font-size: 16pt;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .wexpDesc, .voluDesc, .wexpDescClick, .voluDescClick
+  {
+    font-size: 17pt;
+  }
+  .wexpDescClick, .voluDescClick
+  {
+    text-decoration: underline;
+  }
+  .wexpDescClick, .voluDescClick, #uniModExpand, #gcseExpand
+  {
+    cursor: pointer;
+  }
+  .projectLinks
+  {
+    font-size: 22pt;
+  }
+  .pInfo
+  {
+    font-size: 20pt;
+  }
+
+  #outer-test-container
+  {
+  }
+  .both-sides
+  {
+    display: inline-block;
+    width: 40%;
+  }
+  #left-side-test
+  {
+  }
+  #right-side-test
+  {
+  }
+
+
+  
+}

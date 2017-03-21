@@ -1,0 +1,35 @@
+<?php
+  session_save_path("/tmp");
+  session_start();
+  require 'database.php';
+  $db = new Database();
+  $username = $_POST['username'];
+  echo $username;
+  echo "<br>";
+  $password = $_POST['pass'];
+  echo $password;
+  echo "<br>";
+  $encpass = sha1($password);
+  echo $encpass;
+  echo "<br>";
+  //$row = $db->querySingle("SELECT * FROM users WHERE(username = '$username')");
+  $row = $db->prepare("SELECT * FROM users WHERE username=:username");
+  echo "1 <br>";
+  $row->bindValue(':username', $username, SQLITE3_TEXT);
+  echo "2 <br>";
+  $results = $row->execute();
+  echo "3 <br>";
+  $results1 = $results->fetchArray();
+  echo "4 <br>";
+  if(sha1($encpass. "--" .$results1['salt']) == sha1($results1['password']. "--" .$results1['salt']))
+  {
+    $_SESSION['userid'] = $results1['userid'];
+    echo $_SESSION['userid'];
+    header('Location:managelist.php');
+  }
+  else
+  {
+    header('Location:login.php');
+  }
+
+?>

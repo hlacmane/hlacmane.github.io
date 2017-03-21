@@ -1,0 +1,45 @@
+$(document).ready( function() 
+{
+  $('.desc').on("click" , ".itembutton" , function()
+  {
+    var something = $(this);
+    console.log("array?????????");
+    console.log(something);
+    var swag;
+    swag = something[0].dataset.itemid;
+    console.log("item id = " + swag);
+    var userid;
+    userid = something[0].dataset.userid;
+    console.log("userid = " + userid);
+    var listid;
+    listid = something[0].dataset.listid;
+    var data = {"itemid": swag,"userid": userid, "listid": listid}
+    console.log(data);
+      $.post("itemupdate.php",data,function(response) 
+      {
+      console.log("hi");
+      console.log("received variable????" + response);
+      $('.desc').html(response);
+      });
+
+  });
+
+
+//ignore bit below
+
+//   $('.itembuttondone').click( function()
+//   {
+//     var something1 = $(this);
+//     console.log("something1 = " + something1);
+//     var ditemid = something1[0].dataset.itemid;
+//     console.log("ditemid = " + ditemid);
+//     var duserid = something1[0].dataset.userid;
+//     console.log("duserid = " + duserid);
+//     var dlistid = something1[0].dataset.listid;
+//     var data1 = {"ditemid": ditemid, "duserid": duserid, "dlistid": dlistid};
+//   });
+//   
+//if item is done, hjsut fade out colour
+//change button vlaue so that they can add ti back to the lsit if they wish.
+
+  });

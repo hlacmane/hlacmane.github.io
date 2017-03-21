@@ -1,0 +1,268 @@
+/*
+Theme Name: swagtest1.9
+Theme URI: hamthemui
+Description: swagtest1 desc.
+Version: 1.0
+Author: Hamish Lacmane
+Author URI: hlacmane.co.uk
+*/
+
+div.error
+{
+}
+
+div.accbar
+{
+  text-align: right;
+  font-weight: bold;
+}
+.all
+{
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #000000;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+.maintitle
+{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 75px;
+  position: relative;
+  vertical-align: middle; 
+}
+
+.desc
+{
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+.links
+{
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 0.3em;
+}
+
+.accbar
+{
+  text-align: right;
+  font-weight: bold;
+}
+.allForms
+{
+  text-align: center;
+}
+.formRow
+{
+  height: 35px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.formRowLeftSide, 
+.formRowRightSide
+{
+  display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 350px;
+}
+.formRowLeftSide
+{
+  
+}
+.formRowRightSide
+{
+}
+
+.formLabels
+{
+  font-size: 22px;
+}
+.formLogin
+{
+}
+#loginSubmitRow
+{
+  height: 50px;
+  margin-top: 12px;
+}
+.formSubmit, 
+.formSubmit:hover
+{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: 0px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: 800;
+  background-color: #FFFFFF;
+}
+.formSubmit:hover
+{
+  background-color: #000000;
+  color: #FFFFFF;
+}
+#regisSubmit, 
+#regisSubmit:hover
+{
+  border: 5px;
+  border-style: double;
+}
+#homeLogin
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 5px;
+  border-color: #000000;
+  border-style: double;
+}
+.inputBox
+{
+  text-align: center;
+  width: 170px;
+  border: 0px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+.regisOpts
+{
+}
+label
+{
+  font-weight: bold;
+}
+
+.biglogo
+{
+  text-align: center;
+  display:block;
+  margin: 0 auto;
+}
+
+.generalRow
+{
+  margin-top: 5px;
+  text-align: center;
+}
+#regisGenRow
+{
+  margin-bottom: 5px;
+  
+}
+#regisSubmitRow
+{
+  height: 50px;
+}
+
+
+a:link
+{
+  color: #FF0000;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+a:visited
+{
+  color: #FF0000;
+  font-weight: bold;
+}
+
+a:hover
+{
+  color: #000000;
+  background-color: #FF0000;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+#regisCheckBox
+{
+  height: 35px;
+  width: 35px;
+  background-color: #FFFFFF;
+}
+
+#regisSelect
+{
+  height: 30px;
+  width: 180px;
+  border: 0px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.yescompitems
+{
+  color: #7FFF00;
+}
+
+.nocompitems
+{
+  color: #FFD700;
+}
+
+.tableoflists
+{
+}
+.tableoflists th
+{
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: bold;
+}
+td
+{
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.tableoflistitems th
+{
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: bold;
+}
+
+submit
+{
+  width: 50em;
+  margin: 0px auto;
+  text-align: center;
+  padding-bottom: 0.3em;
+}
+
+.copyrightbar
+{
+  background-color: #696969;
+  height: 1.5em;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-align: right;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  padding-top: 0.175em;
+  margin: 0em;
+  border: 1em;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+body
+{
+  background-color: #696969;
+  color: #FFFFFF;
+}

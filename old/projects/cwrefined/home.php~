@@ -1,0 +1,79 @@
+<?php
+  include 'checkloggedin.php';
+?>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/bill.css">
+    <title>Billsplitter</title>
+    <?php 
+      error_reporting(E_ALL);
+      ini_set("display_errors", 1);
+    ?>
+    <script src='js/jquery-2.1.3.min.js'></script>
+    <script src='js/jgroup.js' type='text/javascript' charset='utf-8'></script>
+  </head>  
+
+  <body>
+
+    <div class="all">
+      <div class="accbar">
+	<!--a href="logout.php">logout</a-->
+	<?php include 'loggedinbar.php' ?></div>
+      <div class="maintitle"><?php include 'logo.php' ?> <b>Home</b></div>
+      <div class="links"> 
+<!--      <a href="createbill.php">Create Bill</a>-->
+      <a href="creategroup.php">Create Group</a>
+      <div class="desc">    
+	<div class='error'></div>
+	<form method='post' action='jgroup.php' name='joingform' id='joingform'>
+	  <table class='tofgdisplay'>
+	    <tr><td><label>Group name: </label></td><td><input class='inputbox' name='joingname' required id='joingname' maxlength='30'></td></tr>
+	    <tr><td><label>Group password: </label></td><td><input class='inputbox' type='password' name='gpass1' required id='joingpass1' maxlength='30'></td></tr>
+	    <tr><td><label>Re-enter group password: </label></td><td><input class='inputbox' type='password' name='gpass2' required id='joingpass2' maxlength='30'></td></tr>
+	  </table>
+	  <div class='regispgbuttons'>
+	    <input class='submitbutton' type='submit'  name='joingsubmit' value='Join Group'>
+	  </div>
+	</form>
+
+	<div class='textmid'>The groups you are in are listed below.<br><br>
+	</div>
+	<div class='desc2'>
+	<?php
+	  
+	  echo '<table class="tofgdisplay">';
+	  echo '<tr> <th> Group name: </th> <th> Group creator: </th> </tr>';
+
+
+	  $grouplist2 = $db->prepare("SELECT * from utog WHERE userid=:uid1");
+	  $grouplist2->bindValue(':uid1', $theuserid, SQLITE3_TEXT);
+	  $glist2 = $grouplist2->execute();
+
+	  while($glist3 = $glist2->fetchArray())
+	  {
+	    $checkgid = $glist3['gid'];
+	    $grouplist3 = $db->prepare("SELECT * from bgroups WHERE groupid=:gidy");
+	    $grouplist3->bindValue(':gidy', $checkgid, SQLITE3_INTEGER);
+	    $grouplist4 = $grouplist3->execute();
+	    while($glist5 = $grouplist4->fetchArray())
+	    {
+	    echo "<tr class='trofglist'> <td> <form method='post' action='pageofgroup.php'><input type='hidden' name=groupid value=".$glist5['groupid']."><input class='submitbutton' type='submit' name=groupname value=" .htmlspecialchars($glist5['groupname']). "> </td> <td> " .htmlspecialchars($glist5['gownername']). "</td> </tr>";
+
+	    }
+	  }
+	  echo "</table>";
+	?>
+	</div>
+	<br>
+	
+      </div>
+
+      <?php include 'copyrightbar.php' ?>
+
+    </div>
+  </body>
+
+</html>
