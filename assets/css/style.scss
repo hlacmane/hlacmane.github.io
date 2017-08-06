@@ -1,0 +1,151 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i');
+/*425 768*/
+$main-background: #222;
+$main-color: #FFFFFF;
+
+
+html
+{
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+  }
+}
+
+body {
+  width: 100%;
+  height:100vh;
+  background-color: $main-background;
+  color: $main-color;
+  text-align: center;
+  font-size: 30pt;
+  letter-spacing: 2.5px;
+}
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: $main-color;
+  &:visited {
+
+  }
+  &:hover {
+    background-color: $main-color;
+    color: $main-background;
+  }
+  &:active {
+
+  }
+
+}
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+
+  }
+}
+header {
+  width: 100%;
+  position: absolute;
+  nav {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    ul {
+      background-color: rgba(34,34,34,0.95);
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      li {
+        display: inline-block;
+        width: 50%;
+
+      }
+    }
+  }
+}
+
+
+a.nav-links {
+  text-decoration: none;
+  font-size: 25pt;
+  font-weight: 200;
+  color: $main-color;
+  transition: all 0.3s ease-in-out;
+  padding-left: 20px;
+  padding-right: 20px;
+  &:visited {
+  }
+  &:hover {
+    background-color: $main-color;
+    color: $main-background;
+  }
+  &:active {
+  }
+}
+
+
+
+
+.li-show {
+  display: none;
+}
+.li-nav {
+  //transition: all 1s steps(50,end);
+  opacity: 0.1;
+}
+/*#link-list {
+  transition: all 0.3s ease-in-out;
+}
+#link-list:hover > .li-nav {
+  //transition: all 1s steps(50,end);
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+}*/
+
+// ul.link-holders {
+//   // transition: all 0.3s ease-in-out;
+//   //display: inline-flex;
+// }
+
+
+main {
+
+}
+footer {
+
+}
+
+#all
+{
+  display: flex;
+  flex-direction: column;
+  /*position: relative;
+  min-height: 100vh;*/
+}
+
+.row {
+  width:100%;
+  height: 100vh;
+  font-size: 75pt;
+  font-weight: 200;
+  position: relative;
+  #row-landing {
+
+  }
+}
+
+.container {
+  .box {
+    width: 80%;
+    margin-left: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+  }
+}
