@@ -3,18 +3,19 @@
 /*425 768*/
 $main-background: #222;
 $main-color: #FFFFFF;
-
+$font-name: 'Titillium Web';
+$font-type: sans-serif;
 
 html
 {
-  body {
+  body, .body-1 {
     margin: 0;
     padding: 0;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: $font-name, $font-type;
   }
 }
 
-body {
+body, .body-1 {
   width: 100%;
   height:100vh;
   background-color: $main-background;
@@ -68,7 +69,10 @@ header {
     }
   }
 }
-
+// .body-2 {
+//   background-color: $main-color;
+//   opacity: 0;
+// }
 
 a.nav-links {
   text-decoration: none;
@@ -134,9 +138,20 @@ footer {
   font-size: 75pt;
   font-weight: 200;
   position: relative;
-  #row-landing {
 
-  }
+  // border-width: 1px;
+  // border-style: solid;
+  // border-color: white;
+
+}
+#landing {
+  transition: all 0.3s ease-in-out;
+  //opacity: 0;
+
+}
+.row-diff {
+  transition: all 0.3s ease-in-out;
+  background-color: $main-color;
 }
 
 .container {
@@ -148,4 +163,207 @@ footer {
     transform: translate(-50%,-50%);
     position: absolute;
   }
+  #box-friends {
+    width: 100%;
+  }
+}
+a#name-paypal {
+  transition: all 0.3s ease-in-out;
+  //opacity: 0;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+a#name-paypal:hover {
+  //background-color: $main-color;
+  background-color: unset;
+}
+.section-sub-headers {
+  font-size: 15pt;
+}
+
+//friends part
+div.friends-all {
+  // border-width: 1px;
+  // border-color: $main-color;
+  // border-style: solid;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+div#friend-lil-bitch {
+  background-image: url("../images/hamish_aaron.png");
+}
+div#friend-macpherson {
+  background-image: url("../images/hamish_alex.png");
+
+}
+div#friend-baxo {
+  background-image: url("../images/hamish_baxo.png");
+}
+div#friend-golden {
+  background-image: url("../images/hamish_golden.png");
+}
+div#friend-tk {
+  background-image: url("../images/hamish_tk.png");
+}
+div#friend-yash {
+  background-image: url("../images/hamish_yash.png");
+}
+div.inner-friends {
+  //background-color: white;
+  width: 100%;
+  height: 100%;
+  //color: black;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  display: inline-flex;
+  align-items: center;
+}
+div.inner-friends:hover {
+  opacity: 0.7;
+}
+div.inner-two-friends {
+  width: 100%;
+}
+div#inner-lil-bitch:hover {
+  background-color: #fa4b4b;
+}
+div#inner-macpherson:hover {
+  background-color: brown;
+}
+div#inner-baxo:hover {
+  background-color: greenyellow;//NavajoWhite
+}
+div#inner-baxo:hover, div#inner-yash:hover {
+  color: black;
+}
+div#inner-golden:hover {
+  background-color: #BF9223;
+}
+div#inner-tk:hover {
+  background-color: cornflowerblue;
+}
+div#inner-yash:hover {
+  background-color: $main-color;
+}
+a.links-friends {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+a.links-friends:hover {
+  background-color: unset;
+  color: $main-color;
+}
+
+a.links-baxo-yash {
+  color: black;
+  background-color: unset;
+}
+a.links-baxo-yash:hover {
+  color: black;
+
+}
+//Contact part
+div.section-cols {
+  display: flex;
+  //flex-direction: column;
+}
+div.contact-both, div.friends-all {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25pt;
+}
+div#contact-left {
+
+}
+div#contact-right {
+
+}
+div#inner-left {
+  display: block;
+  text-align: left;
+}
+a.contact-links {
+  display: inline-block;
+
+}
+
+form#contact-me {
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  input, textarea {
+    font-family: $font-name, $font-type;
+    font-size: 15pt;
+    //margin: 20px 5px 20px 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 12.5px 10px 12.5px;//top right bottom left
+    border: 0;
+    display: block;
+    width: 75%;
+    background-color: $main-color;
+    //color: $main-background;
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+  input:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+  input#input-submit {
+    width: 80%;
+    transition: all 0.3s ease-in-out;
+  }
+  input#input-submit:hover {
+    background-color: $main-background;
+    color: $main-color;
+  }
+
+  /*
+  input.contact-inputs {
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+  }
+  input#input-submit {
+
+  }*/
 }

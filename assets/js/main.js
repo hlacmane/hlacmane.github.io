@@ -43,4 +43,90 @@ $(document).ready( function()
     return false;
   });
 
+  // $('#name-paypal').mouseenter(function() {
+  //   $("#landing").stop().animate({
+  //     "background-color": "white",
+  //   }, 750, function() {
+  //     //completion code?
+  //   });
+  //
+  //   return false;
+  // });
+  // $('#name-paypal').mouseleave(function() {
+  //   $("#landing").stop().animate({
+  //     "background-color": "#222",
+  //   }, 750, function() {
+  //     //completion code?
+  //   });
+  //
+  //   return false;
+  // });
+
+  // $('#name-paypal').hover(
+  //
+  //   function(){
+  //       $('body').animate({'background-color': 'white'},400);
+  //   },
+  //   function(){
+  //       $('body').animate({'background-color': '#222'},400);
+  //   }
+  // );
+
+  $('#name-paypal').mouseenter(function() {
+    // $( "body" ).toggleClass( "body-2" );
+    // $(".body-2").stop().animate({
+    //   opacity: 1,
+    // }, 300, function() {
+    //   //completion code?
+    // });
+    // $(".body-1").stop().animate({
+    //     "background-color": "#FFF",
+    //   }, 750, function() {
+    //     //completion code?
+    // });
+    $( "#landing" ).toggleClass( "row-diff" );
+    // $(".row-diff").stop().animate({
+    //   opacity: 1,
+    // }, 1000, function() {
+    //   //completion code?
+    // });
+    // $('#landing').find('*').css('opacity', '1');
+    return false;
+  });
+  $('#name-paypal').mouseleave(function() {
+
+    // $(".body-2").stop().animate({
+    //   opacity: 0.1,
+    // }, 300, function() {
+    //   //completion code?
+    // });
+    // $( "body" ).toggleClass( "body-2" );
+
+    // $(".body-1").stop().animate({
+    //     "background-color": "#222",
+    //   }, 750, function() {
+    //     //completion code?
+    // });
+
+
+    // $(".row-diff").stop().animate({
+    //   opacity: 0,
+    // }, 1000, function() {
+    //   //completion code?
+    //   $( "#landing" ).toggleClass( "row-diff" );
+    //   $('#landing').css('opacity', '');
+    //   $('#landing').find('*').css('opacity', '1');
+    // });
+    $( "#landing" ).toggleClass( "row-diff" );
+
+
+
+    return false;
+  });
+
+  function bgChange(x) {
+    document.body.style.background = x;
+  }
+
+
 });
