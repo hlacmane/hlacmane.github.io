@@ -13,7 +13,8 @@ body {
   color: #FFFFFF;
   text-align: center;
   font-size: 30pt;
-  letter-spacing: 2.5px; }
+  letter-spacing: 2.5px;
+  cursor: context-menu; }
 
 a {
   margin: 0;
@@ -98,7 +99,7 @@ a.nav-links {
   top: 50%;
   transform: translate(-50%, -50%);
   position: absolute; }
-.container #box-friends {
+.container #box-friends, .container #box-portfolio {
   width: 100%; }
 
 a#name-paypal {
@@ -144,10 +145,107 @@ a#name-paypal {
     opacity: 0; }
   to {
     opacity: 1; } }
-.section-sub-headers {
+div.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in-out;
+  z-index: 2;
+  background-color: rgba(100, 100, 100, 0.9);
+  color: black; }
+  div.overlay.is-open {
+    opacity: 1;
+    pointer-events: auto; }
+
+div.modal {
+  max-width: 80%;
+  width: 75%;
+  height: 60%;
+  background: white;
+  padding: 30px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+  display: none; }
+  div.modal .close-button {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+    color: #FFFFFF; }
+    div.modal .close-button:hover {
+      transform: scale(1.2); }
+  div.modal .all-modal-text {
+    font-size: 40pt; }
+    div.modal .all-modal-text .modal-header {
+      font-weight: 400; }
+    div.modal .all-modal-text .modal-date {
+      font-size: 20pt; }
+    div.modal .all-modal-text .modal-desc, div.modal .all-modal-text .modal-activities {
+      font-size: 30pt;
+      font-weight: 300; }
+  div.modal .lead {
+    color: black;
+    font-size: 30px;
+    line-height: 1.3; }
+  div.modal p {
+    color: #999;
+    font-size: 18px; }
+
+div.section-headers {
+  cursor: context-menu; }
+
+div.section-sub-headers {
   font-size: 15pt; }
 
-div.friends-all {
+div.edu-box, div.work-exp-box {
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-style: solid;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+  div.edu-box:hover, div.work-exp-box:hover {
+    cursor: pointer; }
+  div.edu-box:hover > div.combo-hover, div.work-exp-box:hover > div.combo-hover {
+    display: block; }
+  div.edu-box:hover > div.combo-initial, div.work-exp-box:hover > div.combo-initial {
+    display: none; }
+  div.edu-box div.combo-hover, div.work-exp-box div.combo-hover {
+    display: none; }
+
+div#portfolio-thirty-degrees {
+  background-image: url("../images/thirty-degrees-poster-icon-light-bg-edited.png"); }
+
+div#portfolio-boar {
+  background-image: url("../images/boar-logo-site-2.png"); }
+
+div#portfolio-cliqquer {
+  background-image: url("../images/hamish_aaron.png"); }
+
+div#inner-thirty-degrees:hover {
+  background-color: black; }
+
+div#inner-boar:hover {
+  background-color: white;
+  color: black; }
+
+div#inner-cliqquer:hover {
+  background-color: black; }
+
+div.friends-all, div.portfolio-all {
   height: 250px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -171,17 +269,17 @@ div#friend-tk {
 div#friend-yash {
   background-image: url("../images/hamish_yash.png"); }
 
-div.inner-friends {
+div.inner-friends, div.inner-portfolio {
   width: 100%;
   height: 100%;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   display: inline-flex;
   align-items: center; }
-  div.inner-friends:hover {
+  div.inner-friends:hover, div.inner-portfolio:hover {
     opacity: 0.7; }
 
-div.inner-two-friends {
+div.inner-two-friends, div.inner-two-portfolio {
   width: 100%; }
 
 div#inner-lil-bitch:hover {
@@ -222,13 +320,19 @@ a.links-baxo-yash {
 div.section-cols {
   display: flex; }
 
-div.contact-both, div.friends-all {
+div#portfolio-three-col {
+  justify-content: space-around; }
+
+div.contact-both, div.portfolio-all, div.friends-all, div.about-both {
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   font-size: 25pt; }
+
+div.portfolio-all {
+  width: 35%; }
 
 div#inner-left {
   display: block;
@@ -264,6 +368,7 @@ form#contact-me {
     background-color: #FFFFFF;
     border: 1px solid white; }
     form#contact-me input:focus, form#contact-me textarea:focus {
+      outline: none;
       box-shadow: 0 0 5px white;
       border: 1px solid white; }
   form#contact-me input#input-submit {

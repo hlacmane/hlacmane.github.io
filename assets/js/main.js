@@ -34,4 +34,42 @@ $(document).ready( function()
     return false;
   });
 
+  //do this the proper efficient way after
+  $('#edu-hover-1').click( function() {
+    $('.overlay').toggleClass('is-open');
+    $('#edu-modal-1').show();
+    return false;
+  });
+
+  $('#close-edu-modal-1').click( function() {
+    $('#edu-modal-1').hide();
+    $('.overlay').toggleClass('is-open')
+
+    return false;
+  });
+
+  $('#edu-hover-2').click( function() {
+    $('.overlay').toggleClass('is-open');
+    $('#edu-modal-2').show();
+    return false;
+  });
+
+  $('#close-edu-modal-2').click( function() {
+    $('#edu-modal-2').hide();
+    $('.overlay').toggleClass('is-open')
+    return false;
+  });
+
+  $('#edu-hover-3').click( function() {
+    $('.overlay').toggleClass('is-open');
+    $('#edu-modal-3').show();
+    return false;
+  });
+
+  $('#close-edu-modal-3').click( function() {
+    $('#edu-modal-3').hide();
+    $('.overlay').toggleClass('is-open')
+    return false;
+  });
+
 });
